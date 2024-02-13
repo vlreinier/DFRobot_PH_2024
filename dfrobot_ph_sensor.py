@@ -100,13 +100,13 @@ class DFRobotPHSensor:
             )
 
     def calibrate_ph7(self, mv: float) -> None:
-        self.neutral_voltage = mv
         self._store_calibration_data()
+        self.neutral_voltage = mv
         print(f"Successfully calibrated PH7 voltage to {mv} mV")
 
     def calibrate_ph4(self, mv: float) -> None:
-        self.acid_voltage = mv
         self._store_calibration_data()
+        self.acid_voltage = mv
         print(f"Successfully calibrated PH4 voltage to {mv} mV")
 
     def reset_to_default(self) -> None:
